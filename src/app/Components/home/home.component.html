@@ -1,0 +1,17 @@
+<p>listing-details works!</p>
+<table style="border: 2px dashed blue;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <td>Link</td>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+        <td>{{ contact.id }}</td>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.email }}</td>
+        <td>
+            <a [routerLink] = "['/listings', contact.id]">Go to details</a>
+        </td>
+    </tr>
+</table>
