@@ -11,7 +11,9 @@
         <td>{{ contact.name }}</td>
         <td>{{ contact.email }}</td>
         <td>
-            <a [routerLink] = "['/listings', contact.id]">Go to details</a>
+            <a [routerLink] = "['/home', contact.id]">Go to details</a>
         </td>
     </tr>
 </table>
+
+<router-outlet />

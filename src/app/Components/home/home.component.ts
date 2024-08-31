@@ -1,6 +1,9 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+
+// import json file of list
+import ls from "../../asset/ls.json"
 
 type ListingType ={
   id: number;
@@ -11,25 +14,13 @@ type ListingType ={
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor,RouterLink],
+  imports: [NgFor,RouterLink,RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   title = 'para-routing';
 
-  contacts: ListingType[] = [
-    {
-      id:1, name:"max",email:"max@gmail.com"
-    },
-    {
-      id:1, name:"max",email:"max@gmail.com"
-    },
-    {
-      id:1, name:"max",email:"max@gmail.com"
-    },
-    {
-      id:1, name:"max",email:"max@gmail.com"
-    }
-  ]
+  contacts: ListingType[] = ls
+ 
 }
